@@ -450,13 +450,16 @@
      }
 
      .singleService {
-
-
          width: 100%;
          height: auto;
          margin: 30px auto;
 
+     }
 
+     .singleService p {
+
+         padding: 10px;
+         margin-bottom: 10px;
      }
 
 
