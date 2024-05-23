@@ -3,22 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../styles/login.css" />
   </head>
 
   <body>
     <div class="page">
-      <form method="POST" class="formLogin">
+      <form id="loginForm" class="formLogin">
         <h1>Login</h1>
         <p>Digite os seus dados de acesso no campo abaixo.</p>
-        <label for="email">E-mail</label>
-        <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
-        <label for="password">Senha</label>
-        <input type="password" placeholder="Digite seu e-mail" />
+        <label for="loginEmail">E-mail</label>
+        <input
+          type="email"
+          id="loginEmail"
+          placeholder="Digite seu e-mail"
+          autofocus="true"
+        />
+        <label for="loginPassword">Senha</label>
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Digite sua senha"
+        />
         <a href="/">Esqueci minha senha!</a>
         <input type="submit" value="Acessar" class="btn" />
       </form>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loginForm = document.getElementById("loginForm");
+
+        loginForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          login();
+        });
+
+        function login() {
+          const email = document.getElementById("loginEmail").value;
+          const password = document.getElementById("loginPassword").value;
+
+          if (!email || !password) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+          }
+
+          const users = JSON.parse(localStorage.getItem("users")) || [];
+          const user = users.find(
+            (user) => user.email === email && user.password === password
+          );
+
+          if (user) {
+            alert("Login realizado com sucesso!");
+            loginForm.reset();
+            window.location.href = "../pages/user.html";
+          } else {
+            alert("E-mail ou senha incorretos.");
+          }
+        }
+      });
+    </script>
   </body>
 </html>
