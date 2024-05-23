@@ -1,17 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('form-agenda');
-  const consultasContainer = document.getElementById('consultas');
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("form-agenda");
+  const consultasContainer = document.getElementById("consultas");
   let consultaId = 4;
-  form.addEventListener('submit', (event) => {
+  form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const especialidade = document.getElementById('especialidade').value;
-    const data = document.getElementById('data').value;
-    const horario = document.getElementById('horario').value;
+    const especialidade = document.getElementById("especialidade").value;
+    const data = document.getElementById("data").value;
+    const horario = document.getElementById("horario").value;
 
     if (especialidade && data && horario) {
-      const consulta = document.createElement('div');
-      consulta.className = 'consulta';
+      const consulta = document.createElement("div");
+      consulta.className = "consulta";
       consulta.dataset.id = consultaId++;
 
       consulta.innerHTML = `
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </label>
       `;
 
-      consulta.querySelector('.btn-red').addEventListener('click', () => {
+      consulta.querySelector(".btn-red").addEventListener("click", () => {
         consulta.remove();
       });
 
@@ -32,13 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       form.reset();
     } else {
-      alert('Por favor, preencha todos os campos.');
+      alert("Por favor, preencha todos os campos.");
     }
   });
 
-  document.querySelectorAll('.btn-red').forEach(button => {
-    button.addEventListener('click', (event) => {
-      event.target.closest('.consulta').remove();
+  document.querySelectorAll(".btn-red").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.target.closest(".consulta").remove();
     });
   });
 });
