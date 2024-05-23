@@ -1,136 +1,161 @@
  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: "Montserrat", sans-serif;
  }
 
 
 
-/*NAVBAR CSS*/
-.containerHeader {
-    width: 100%;
-    background-image: url('../images/wraper.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: fixed;
-    height: 500px;
-    z-index: 0;
-}
-
-.overload {
-    width: 100%;
-    height: 500px;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.671);
-}
-
-.logo {
-    width: 120px;
-    height: 120px;
-    cursor: pointer;
-}
-
-.logo img {
-    width: 100%;
-}
-
-.navigation {
-    padding: 0 2%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.navigation ul {
-    display: flex;
-    justify-content: end;
-    padding: 40px;
-
-}
-
-.navigation ul li {
-    margin-left: 20px;
-    padding: 10px;
-    list-style: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.5s;
-    text-decoration: none;
-    color: white;
-  
-}
-.navigation ul li a{
-    text-decoration: none;
-    color: white;
-}
-
-.navigation ul li:hover {
-    background-color: #005CFA;
-
-}
-
-.descriptionHeader {
-    width: 400px;
-    padding: 30px;
-    color: white;
-}
-
-.descriptionHeader h1 {
-    margin-bottom: 9px;
-    font-weight: bold;
-
-}
-
-.descriptionHeader p {
-    margin-bottom: 60px;
-}
-
-.descriptionHeader button {
-    background-color: #005CFA;
-    color: white;
-    font-weight: bold;
-    width: 100%;
-    height: 50px;
-    border-radius: 10px;
-    cursor: pointer;
-    border-color: transparent;
-}
-
-.descriptionHeader button:hover {
-    background-color: #1656c4;
-}
-
-/*HOME CSS*/
-.container1 {
-    width: 100%;
+ /*NAVBAR CSS*/
+ .containerHeader {
+     width: 100%;
+     background-image: url('../images/wraper.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center top;
+     background-attachment: fixed;
+     height: 500px;
+     z-index: 0;
  }
- 
- 
- 
+
+ .overload {
+     width: 100%;
+     height: 500px;
+     z-index: 1;
+     background-color: rgba(0, 0, 0, 0.671);
+ }
+
+ .logo {
+     width: 120px;
+     height: 120px;
+     cursor: pointer;
+ }
+
+ .logo img {
+     width: 100%;
+ }
+
+ .navigation {
+     padding: 0 2%;
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .menuMobile {
+     display: none;
+     padding: 0 2%;
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .menuMobile i {
+     display: none;
+     padding: 25px;
+     color: white;
+     font-size: 50px;
+     cursor: pointer;
+
+ }
+
+ .menuMobile img,
+ .menuMobile .logo {
+     display: none;
+ }
+
+
+
+ .navigation ul {
+     display: flex;
+     justify-content: end;
+     padding: 40px;
+
+ }
+
+ .navigation ul li {
+     margin-left: 20px;
+     padding: 10px;
+     list-style: none;
+     cursor: pointer;
+     font-size: 18px;
+     font-weight: bold;
+     border-radius: 5px;
+     transition: 0.5s;
+     text-decoration: none;
+     color: white;
+
+ }
+
+ .navigation ul li a {
+     text-decoration: none;
+     color: white;
+ }
+
+ .navigation ul li:hover {
+     background-color: #005CFA;
+
+ }
+
+ .descriptionHeader {
+     width: 400px;
+     padding: 30px;
+     color: white;
+ }
+
+ .descriptionHeader h1 {
+     margin-bottom: 9px;
+     font-weight: bold;
+
+ }
+
+ .descriptionHeader p {
+     margin-bottom: 60px;
+ }
+
+ .descriptionHeader button {
+     background-color: #005CFA;
+     color: white;
+     font-weight: bold;
+     width: 100%;
+     height: 50px;
+     border-radius: 10px;
+     cursor: pointer;
+     border-color: transparent;
+ }
+
+ .descriptionHeader button:hover {
+     background-color: #1656c4;
+ }
+
+ /*HOME CSS*/
+ .container1 {
+     width: 100%;
+ }
+
+
+
  .container1 div:nth-child(1) {
-     max-width: 500px;
+     max-width: 700px;
      padding: 50px;
-    
+
  }
- 
+
  .container1 div h1 {
      font-weight: bold;
      font-size: 45px;
      margin-top: 80px;
  }
+
  .container {
      width: 100%;
      display: flex;
      justify-content: space-between;
      padding: 0 2%;
-  
-   
-     
+
+
+
  }
- 
+
  .container button {
      background-color: #005CFA;
      margin-top: 250px;
@@ -142,65 +167,69 @@
      cursor: pointer;
      border-color: transparent;
  }
- 
+
  .container button:hover {
      background-color: #1656c4;
- 
+
  }
- 
+
  .image {
      width: 850px;
-     height: 850px;
-   
+     padding-bottom: 50px;
+
  }
+
  .image img {
      width: 100%;
  }
- 
- 
+
+
  .container2 {
      width: 100%;
      background-color: #0446C9;
      color: white;
  }
+
  .container2 h2 {
      text-align: center;
      padding: 20px 0;
      margin-bottom: 30px;
- 
+
  }
- .services{
+
+ .services {
      display: flex;
-    justify-content: center;
-    padding: 20px;
- 
- 
-     
+     justify-content: center;
+     padding: 20px;
+
+
+
  }
- 
- .singleService{
+
+ .singleService {
      width: 150px;
      height: 200px;
      border: 2px solid white;
      border-radius: 10px;
      margin-right: 30px;
-     
+
  }
+
  .singleService p {
-     text-align:center ;
+     text-align: center;
      padding: 10px;
      font-size: 15px;
      margin-top: 18px;
  }
- 
- 
+
+
  .container3 {
      width: 100%;
      background-color: #005CFA;
      color: white;
      padding: 40px;
  }
- 
+
  .container3 h2 {
      text-align: center;
      font-weight: bold;
@@ -208,15 +237,15 @@
      padding: 30px 0;
      margin-bottom: 30px;
  }
- 
+
  .optionServices {
      display: flex;
      justify-content: center;
- 
+
  }
- 
+
  .singleOption {
- 
+
      width: 500px;
      height: 350px;
      border-radius: 10px;
@@ -226,21 +255,22 @@
      display: flex;
      flex-direction: column;
      transition: 0.5s;
-     
- 
+
+
  }
- 
- .singleOption h3{
- 
+
+ .singleOption h3 {
+
      margin: 30px 0;
      font-weight: bold;
      font-size: 26px;
  }
+
  .singleOption p {
      font-size: 16px;
      padding: 25px;
  }
- 
+
  .singleOption button {
      width: 300px;
      height: 60px;
@@ -249,65 +279,190 @@
      border-color: transparent;
      font-weight: bold;
      cursor: pointer;
-    
+
  }
- 
- .singleOption:hover{
+
+ .singleOption:hover {
      background-color: white;
      color: black;
      border-color: #00F0AD;
  }
- 
- 
- .service1{
+
+
+ .service1 {
      width: 100%;
      display: flex;
-    border-top: 5px solid #00F0AD;
-     
- 
+     border-top: 5px solid #00F0AD;
+
+
  }
- 
+
  .imageOption {
      width: 50%;
-    
- 
+     padding: 30px;
+
+
  }
- 
+
  .description {
      width: 50%;
-     padding: 30px;
- 
+     padding: 20px;
+
  }
- 
- .description h2, .description h3 {
+
+ .description h2,
+ .description h3 {
      margin-bottom: 30px;
  }
- 
+
  .description p {
      margin-bottom: 30px;
      line-height: 30px;
  }
- 
- 
- 
+
+
+
  .imageOption img {
      width: 100%;
      height: auto;
+     border-radius: 10px;
  }
- 
- 
- 
- 
- 
- .service2{
+
+
+
+
+
+ .service2 {
      width: 100%;
      display: flex;
      flex-direction: row-reverse;
-     
- 
+
+
  }
- 
- 
- 
- 
- 
+
+
+ /*RESPONSIVIDADE*/
+ /*SECTION 3, SERVICE1 AND SERVICE2*/
+
+ @media screen and (max-width: 1100px) {
+
+     .optionServices {
+         flex-wrap: wrap;
+         justify-content: center;
+
+     }
+
+     .singleOption {
+
+         padding: 10px;
+         margin: 10px auto;
+     }
+
+     .service1 {
+         display: block;
+
+
+     }
+
+     .imageOption {
+         margin: 0 auto;
+         width: 100%;
+     }
+
+
+
+     .description {
+         margin: 0 auto;
+         width: 100%;
+     }
+
+     .description p {
+         width: 100%;
+
+     }
+
+     .service2 {
+         display: block;
+     }
+
+
+
+ }
+
+
+ @media screen and (max-width: 791px) {
+
+     .navigation {
+         display: none;
+     }
+
+     .menuMobile,
+     .menuMobile i,
+     .menuMobile img,
+     .menuMobile .logo {
+         display: flex;
+     }
+
+     .descriptionHeader {
+         width: 100%;
+         justify-content: center;
+     }
+
+     .container1 div:nth-child(1) h1 {
+         width: 100%;
+
+     }
+
+     .container1 div h1 {
+         text-align: center;
+     }
+
+     .container {
+         flex-wrap: wrap;
+         justify-content: center;
+         flex-direction: column;
+     }
+
+
+     .container button {
+         margin-bottom: 50px;
+         margin: 50px auto;
+     }
+
+     .container .image {
+         width: 100%;
+         margin: 0 auto;
+     }
+
+     .container .image img {
+         width: 100%;
+         margin: 0 auto;
+
+     }
+
+
+     .services {
+         display: inline-block;
+         width: 100%;
+
+
+
+     }
+
+     .singleService {
+
+
+         width: 100%;
+         height: auto;
+         margin: 30px auto;
+
+
+     }
+
+
+
+
+
+
+
+ }
