@@ -38,9 +38,6 @@
                 aria-describedby="basic-addon1"
                 required
               />
-              <div class="invalid-tooltip">
-                Por favor, informe seu nome completo.
-              </div>
             </div>
           </div>
           <div class="form-group col-md-6">
@@ -56,7 +53,6 @@
                 aria-describedby="basic-addon1"
                 required
               />
-              <div class="invalid-tooltip">Por favor, informe seu CPF.</div>
             </div>
           </div>
           <div class="form-group col-md-6">
@@ -72,7 +68,6 @@
                 aria-describedby="basic-addon1"
                 required
               />
-              <div class="invalid-tooltip">Por favor, informe seu Celular.</div>
             </div>
           </div>
           <div class="form-group col-md-6">
@@ -82,7 +77,6 @@
               <option value="1">Masculino</option>
               <option value="0">Feminino</option>
             </select>
-            <div class="invalid-feedback">Por favor, informe seu sexo.</div>
           </div>
           <div class="form-group col-md-6">
             <label for="birthday">Data de Nascimento</label>
@@ -97,9 +91,6 @@
                 aria-describedby="basic-addon1"
                 required
               />
-              <div class="invalid-tooltip">
-                Por favor, informe sua data de nascimento.
-              </div>
             </div>
           </div>
 
@@ -141,6 +132,10 @@
 
         function register() {
           const nome = document.getElementById("nomePaciente").value;
+          const cpf = document.getElementById("cpf").value;
+          const celular = document.getElementById("phone_number").value;
+          const sexo = document.getElementById("gender").value;
+          const nascimento = document.getElementById("birthday").value;
           const email = document.getElementById("email").value;
           const senha = document.getElementById("senha").value;
           const confirmaSenha = document.getElementById("confirmaSenha").value;
@@ -150,7 +145,15 @@
             return;
           }
 
-          if (!nome || !email || !senha) {
+          if (
+            !nome ||
+            !email ||
+            !senha ||
+            !cpf ||
+            !celular ||
+            !sexo ||
+            !nascimento
+          ) {
             alert("Por favor, preencha todos os campos.");
             return;
           }
