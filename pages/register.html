@@ -157,10 +157,11 @@
         if (userExists) {
           alert("E-mail já cadastrado.");
         } else {
-          users.push({ nome, email, password: senha });
+          users.push({ nome, email, password: senha, logado: false });
           localStorage.setItem("users", JSON.stringify(users));
           alert("Usuário registrado com sucesso!");
           cadastroForm.reset();
+          window.location.href = "../pages/login.html";
         }
       }
     });

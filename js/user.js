@@ -1,4 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const users = JSON.parse(localStorage.getItem("users"));
+  const user = users.find((user) => user.logado);
+
+  if (!user) {
+    window.location.href = "../pages/login.html";
+  } else {
+    const h1 = document.getElementById('userName');
+    h1.textContent = `Olá, ${user.nome}! Bem-vindo(a) à sua agenda!`;
+  }
+  function logoutUser(username) {
+    const users = JSON.parse(localStorage.getItem('users'));
+    const updatedUsers = users.map(user => {
+        if (user.nome === username) {
+            return { ...user, logado: false };
+        }
+        return user;
+    });
+    localStorage.setItem('users', JSON.stringify(updatedUsers));
+    window.location.href = '../index.html';
+  }
+
+  document.getElementById('logoutButton').addEventListener('click', () => {
+    const users = JSON.parse(localStorage.getItem('users'));
+    const user = users.find(user => user.logado);
+
+    if (user) {
+        logoutUser(user.nome);
+    } else {
+        alert('Nenhum usuário está logado.');
+    }
+  });
+
   const form = document.getElementById("form-agenda");
   const consultasContainer = document.getElementById("consultas");
   let consultaId = 4;

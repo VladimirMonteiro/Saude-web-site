@@ -35,7 +35,7 @@
   <main class="user-page">
     <div class="container-user">
       <img src="../images/user-image.png" alt="imagem do paciente" />
-      <h1>Olá, Sra. Adriana Schivas!</h1>
+      <h1 id="userName"></h1>
       <p>
         Seja bem-vindo ao Saúde para Todos. Aqui você pode agendar suas
         consultas online com médicos de diferentes especialidades. Veja abaixo
@@ -98,6 +98,9 @@
         <input type="time" name="horario" id="horario" />
         <label for="agendar" class="btn-agendar">
           <button class="btn-blue" type="submit" id="agendar">Agendar</button>
+        </label>
+        <label for="agendar" class="btn-agendar">
+          <button class="btn-logout" id="logoutButton">Sair</button>
         </label>
       </form>
     </div>
