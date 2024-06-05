@@ -128,6 +128,36 @@ main.user-page {
   background-color: #1976d2;
 }
 
+.btn-logout {
+  background-color: #ff4b5c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+#logoutButton:hover {
+  background-color: #e64450;
+  /* Cor de fundo ao passar o mouse */
+  transform: scale(1.05);
+  /* Leve aumento ao passar o mouse */
+}
+
+#logoutButton:active {
+  background-color: #d33d44;
+  /* Cor de fundo ao clicar */
+  transform: scale(0.95);
+  /* Leve redução ao clicar */
+}
+
+
 @media (min-width: 768px) {
 
   .container-user,

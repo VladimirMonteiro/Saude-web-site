@@ -75,9 +75,21 @@
           (user) => user.email === email && user.password === password
         );
 
+        function loginUser(username) {
+          const users = JSON.parse(localStorage.getItem('users'));
+          const updatedUsers = users.map(user => {
+            if (user.nome === username) {
+              return { ...user, logado: true };
+            }
+            return user;
+          });
+          localStorage.setItem('users', JSON.stringify(updatedUsers));
+        }
+
         if (user) {
           alert("Login realizado com sucesso!");
           loginForm.reset();
+          loginUser(user.nome);
           window.location.href = "../pages/user.html";
         } else {
           alert("E-mail ou senha incorretos.");
