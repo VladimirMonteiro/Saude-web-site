@@ -31,5 +31,20 @@ scrollButton2.addEventListener("click", () => {
 
 })
 
+
+let buttonRegister = document.getElementById("buttonRegister")
+
+buttonRegister.addEventListener("click", ()=> {
+
+    const auth = localStorage.getItem("users")
+    console.log(auth)
+
+    if (!auth) {
+        buttonRegister.setAttribute("href", "./pages/login.html");
+    } else {
+        buttonRegister.setAttribute("href", "./pages/user.html");
+    }
+})
+
 })
 
