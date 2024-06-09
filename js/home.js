@@ -32,7 +32,7 @@ scrollButton2.addEventListener("click", () => {
 })
 
 
-let buttonRegister = document.getElementById("buttonRegister")
+let buttonRegister = document.getElementById("buttonLogin")
 
 buttonRegister.addEventListener("click", ()=> {
 
