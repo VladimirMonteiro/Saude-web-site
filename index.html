@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="./styles/home.css">
   <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="stylesheet" href="./styles/menuu.css">
 </head>
 
 <body>
@@ -39,6 +40,30 @@
         <p>Faça suas consultas por video totalmente grátis! Saúde para todos é uma ação filantrópica.</p>
         <button><a id="buttonLogin" href="" style="text-decoration: none; color: white;">Agendar Agora</a></button>
       </div>
+
+            <button class="MuiIconButton-root" onclick="toggleMenu(event)">
+              <span class="MuiIconButton-label">
+                <div></div>
+                <div></div>
+                <div></div>
+              </span>
+              <div class="menu-options" id="menuOptions">
+                <div>
+                  <a href="#" onclick="toggleDescription(event, 'desc1')">Quem somos? <span>+</span></a>
+                  <div class="description" id="desc1">Somos uma empresa de telemedicina sem fins lucrativos para a população de
+                    baixa renda!</div>
+                </div>
+                <div>
+                  <a href="#" onclick="toggleDescription(event, 'desc2')">Saiba quem são nossos apoiadores <span>+</span></a>
+                  <div class="description" id="desc2">Elon Musk, Jeff Bezos, Mark Zuckerberg, Priscilla Chan.</div>
+                </div>
+                <div>
+                  <a href="#" onclick="toggleDescription(event, 'desc3')">Seja um apoiador <span>+</span></a>
+                  <div class="description" id="desc3">Entre em contato pelo saudeparatodos@filantropia.com.br</div>
+                </div>
+              </div>
+            </button>
+
 
   </header>
 
@@ -170,6 +195,38 @@
   </footer>
 
   <script src="./js/home.js"></script>
+
+  <script> //menu-hamburguer
+    function toggleMenu(event) {
+      event.stopPropagation();
+      var menu = document.getElementById('menuOptions');
+      if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'flex';
+      }
+    }
+
+    function toggleDescription(event, descId) {
+      event.preventDefault();
+      event.stopPropagation();
+      var description = document.getElementById(descId);
+      if (description.style.display === 'block') {
+        description.style.display = 'none';
+      } else {
+        description.style.display = 'block';
+      }
+    }
+
+    // Fechar o menu se clicar fora dele
+    window.onclick = function (event) {
+      var menu = document.getElementById('menuOptions');
+      if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+      }
+    }
+  </script>
+
 </body>
 
 </html>
