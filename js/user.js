@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     const h1 = document.getElementById('userName');
     h1.textContent = `Olá, ${user.nome}! Bem-vindo(a) à sua agenda!`;
+    const footerItems = document.querySelectorAll('.footer-item-list');
+        footerItems.forEach(function(item) {
+          item.classList.add('hidden');
+        });
   }
   function logoutUser(username) {
     const users = JSON.parse(localStorage.getItem('users'));
