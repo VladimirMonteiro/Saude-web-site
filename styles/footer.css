@@ -68,6 +68,10 @@
   transition: color 0.3s ease;
 }
 
+.hidden {
+  display: none;
+}
+
 .footer-item-link:hover {
   color: #2196f3;
 }
