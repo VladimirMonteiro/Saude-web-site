@@ -188,38 +188,3 @@
   </footer>
 
   <script src="./js/home.js"></script>
-
-  <script> //menu-hamburguer
-    function toggleMenu(event) {
-      event.stopPropagation();
-      var menu = document.getElementById('menuOptions');
-      if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
-      } else {
-        menu.style.display = 'flex';
-      }
-    }
-
-    function toggleDescription(event, descId) {
-      event.preventDefault();
-      event.stopPropagation();
-      var description = document.getElementById(descId);
-      if (description.style.display === 'block') {
-        description.style.display = 'none';
-      } else {
-        description.style.display = 'block';
-      }
-    }
-
-    // Fechar o menu se clicar fora dele
-    window.onclick = function (event) {
-      var menu = document.getElementById('menuOptions');
-      if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
-      }
-    }
-  </script>
-
-</body>
-
-</html>
