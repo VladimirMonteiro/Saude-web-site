@@ -2,23 +2,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const users = JSON.parse(localStorage.getItem("users"));
   const user = users.find((user) => user.logado);
 
+  
+
+
   if (!user) {
     window.location.href = "../pages/login.html";
   } else {
     const h1 = document.getElementById('userName');
     h1.textContent = `Olá, ${user.nome}! Bem-vindo(a) à sua agenda!`;
     const footerItems = document.querySelectorAll('.footer-item-list');
-        footerItems.forEach(function(item) {
-          item.classList.add('hidden');
-        });
+    footerItems.forEach(function (item) {
+      item.classList.add('hidden');
+    });
+
+    let button = document.getElementById("entrar")
+    button.innerText = "Sair"
+    let button2 = document.getElementById("registrar")
+    button2.style.display = "none"
+
+
+
+
   }
   function logoutUser(username) {
     const users = JSON.parse(localStorage.getItem('users'));
     const updatedUsers = users.map(user => {
-        if (user.nome === username) {
-            return { ...user, logado: false };
-        }
-        return user;
+      if (user.nome === username) {
+        return { ...user, logado: false };
+      }
+      return user;
     });
     localStorage.setItem('users', JSON.stringify(updatedUsers));
     window.location.href = '../index.html';
@@ -29,9 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const user = users.find(user => user.logado);
 
     if (user) {
-        logoutUser(user.nome);
+      logoutUser(user.nome);
     } else {
-        alert('Nenhum usuário está logado.');
+      alert('Nenhum usuário está logado.');
     }
   });
 
