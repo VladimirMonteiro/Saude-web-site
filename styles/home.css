@@ -46,6 +46,9 @@
   display: flex;
   justify-content: space-between;
 }
+.MuiIconButton-root, .menuOptions{
+  display: none;
+}
 
 .menuMobile i {
   display: none;
@@ -272,6 +275,7 @@
 .description {
   width: 50%;
   padding: 20px;
+  color: black;
 }
 
 .description h2,
@@ -282,6 +286,7 @@
 .description p {
   margin-bottom: 30px;
   line-height: 30px;
+  color: black;
 }
 
 .imageOption img {
@@ -341,7 +346,8 @@
   .menuMobile,
   .menuMobile i,
   .menuMobile img,
-  .menuMobile .logo {
+  .menuMobile .logo,.MuiIconButton-root, .menuOptions{
+    
     display: flex;
   }
 

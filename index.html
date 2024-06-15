@@ -9,9 +9,10 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="./styles/home.css">
+  
   <link rel="stylesheet" href="./styles/footer.css">
   <link rel="stylesheet" href="./styles/menuu.css">
+  <link rel="stylesheet" href="./styles/home.css">
 </head>
 
 <body>
@@ -27,35 +28,36 @@
           <li><a href="/pages/register.html">Registrar</a></li>
         </ul>
       </nav>
-     
+
       <div class="descriptionHeader">
         <h1>Conheça o serviço de telemedicina do Saúde para Todos</h1>
         <p>Faça suas consultas por video totalmente grátis! Saúde para todos é uma ação filantrópica.</p>
         <button><a id="buttonLogin" href="" style="text-decoration: none; color: white;">Agendar Agora</a></button>
       </div>
 
-            <button class="MuiIconButton-root" onclick="toggleMenu(event)">
-              <span class="MuiIconButton-label">
-                <div></div>
-                <div></div>
-                <div></div>
-              </span>
-              <div class="menu-options" id="menuOptions">
-                <div>
-                  <a href="#" onclick="toggleDescription(event, 'desc1')">Quem somos? <span>+</span></a>
-                  <div class="description" id="desc1">Somos uma empresa de telemedicina sem fins lucrativos para a população de
-                    baixa renda!</div>
-                </div>
-                <div>
-                  <a href="#" onclick="toggleDescription(event, 'desc2')">Saiba quem são nossos apoiadores <span>+</span></a>
-                  <div class="description" id="desc2">Elon Musk, Jeff Bezos, Mark Zuckerberg, Priscilla Chan.</div>
-                </div>
-                <div>
-                  <a href="#" onclick="toggleDescription(event, 'desc3')">Seja um apoiador <span>+</span></a>
-                  <div class="description" id="desc3">Entre em contato pelo saudeparatodos@filantropia.com.br</div>
-                </div>
-              </div>
-            </button>
+      <button class="MuiIconButton-root" onclick="toggleMenu(event)">
+        <span class="MuiIconButton-label">
+          <div></div>
+          <div></div>
+          <div></div>
+        </span>
+        <div class="menu-options" id="menuOptions">
+          <div>
+            <a href="#" onclick="toggleDescription(event, 'desc1')">Quem somos? <span>+</span></a>
+            <div class="descriptionx" id="desc1">Somos uma empresa de telemedicina sem fins lucrativos para a população
+              de
+              baixa renda!</div>
+          </div>
+          <div>
+            <a href="#" onclick="toggleDescription(event, 'desc2')">Saiba quem são nossos apoiadores <span>+</span></a>
+            <div class="description" id="desc2">Elon Musk, Jeff Bezos, Mark Zuckerberg, Priscilla Chan.</div>
+          </div>
+          <div>
+            <a href="#" onclick="toggleDescription(event, 'desc3')">Seja um apoiador <span>+</span></a>
+            <div class="description" id="desc3">Entre em contato pelo saudeparatodos@filantropia.com.br</div>
+          </div>
+        </div>
+      </button>
 
 
   </header>
