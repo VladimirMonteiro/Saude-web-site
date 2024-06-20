@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const users = JSON.parse(localStorage.getItem("users"));
   const user = users.find((user) => user.logado);
+  let button = document.getElementById("entrar")
 
   
 
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       item.classList.add('hidden');
     });
 
-    let button = document.getElementById("entrar")
+   
     button.innerText = "Sair"
     let button2 = document.getElementById("registrar")
     button2.style.display = "none"
@@ -24,6 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   }
+
+  button.addEventListener("click", ()=> {
+    localStorage.removeItem("users")
+  })
+
+  
+
   function logoutUser(username) {
     const users = JSON.parse(localStorage.getItem('users'));
     const updatedUsers = users.map(user => {
